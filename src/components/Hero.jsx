@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Github, Linkedin, Mail, Download } from 'lucide-react'
 import { Link } from 'react-scroll'
+import myPhoto from "../hritikraj0111.png"
 
 export default function Hero() {
   const [text, setText] = useState('')
@@ -114,11 +115,7 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden glass p-2 glow-effect">
-                <img
-                  src="src/hritikraj0111.png"
-                  alt="Hritik Raj"
-                  className="w-full h-full object-cover rounded-full"
-                />
+                <img src={myPhoto} alt="Hritik Raj" />
               </div>
               {/* Decorative elements */}
               <motion.div
