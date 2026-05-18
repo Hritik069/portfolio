@@ -34,7 +34,7 @@ function App() {
             viewport={{ once: true }}
             className="text-gray-400"
           >
-            © {new Date().getFullYear()} Your Name. Built with React, Tailwind CSS, and Three.js.
+            © {new Date().getFullYear()} Hritik Raj. Built with React, Tailwind CSS, and Three.js.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ function App() {
             transition={{ delay: 0.2 }}
             className="text-gray-500 text-sm mt-2"
           >
-            Designed with ❤️ for recruiters and opportunities
+            Designed with ❤️
           </motion.p>
         </div>
       </footer>
