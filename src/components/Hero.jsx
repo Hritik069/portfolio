@@ -35,7 +35,7 @@ export default function Hero() {
     },
     {
       icon: Mail,
-      href: 'mailto:your.email@example.com',
+      href: 'mailto:hritikraj0111@gmail.com',
       label: 'Email',
     },
   ]
