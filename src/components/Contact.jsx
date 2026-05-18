@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,12 +17,33 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Replace with your EmailJS service ID, template ID, and public key
+      const serviceId = 'service_68lwjlk'
+      const templateId = 'template_24apa1c'
+      const publicKey = 'vLiY0JmQ1Aa32QQkK'
 
-    toast.success('Message sent successfully! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    setIsSubmitting(false)
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Hritik Raj',
+        },
+        publicKey
+      )
+
+      toast.success('Message sent successfully! I\'ll get back to you soon.')
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      toast.error('Failed to send message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
