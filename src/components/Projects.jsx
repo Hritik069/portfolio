@@ -24,8 +24,8 @@ export default function Projects() {
       description: 'A collaborative task management application with drag-and-drop functionality, team features, and progress tracking.',
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop',
       techStack: ['React', 'TypeScript', 'Firebase', 'Tailwind'],
-      github: 'https://github.com/yourusername/task-manager',
-      demo: 'https://task-manager-demo.vercel.app',
+      github: 'https://github.com/Hritik069/taskManager',
+      demo: 'https://task-manager-orpin-theta.vercel.app',
     },
     {
       title: 'Weather Dashboard',
